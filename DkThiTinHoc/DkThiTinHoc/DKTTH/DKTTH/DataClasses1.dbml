@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SQL_DACS2" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=DESKTOP-FVRF7IJ;Initial Catalog=SQL_DACS2;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="SQL_DACS2ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_Lop" Member="tbl_Lops">
+    <Type Name="tbl_Lop">
+      <Column Name="id_lop_th" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ten_lop_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Association Name="tbl_Lop_tbl_SinhVien" Member="tbl_SinhViens" ThisKey="id_lop_th" OtherKey="id_lop_th" Type="tbl_SinhVien" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_SinhVien" Member="tbl_SinhViens">
+    <Type Name="tbl_SinhVien">
+      <Column Name="id_sv" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_sv" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="lop_sv" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ma_sv" Type="System.String" DbType="Char(20) NOT NULL" CanBeNull="false" />
+      <Column Name="ngay_sinh_sv" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="dia_chi_sv" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="sdt_sv" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_lop_th" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_SinhVien_tbl_LichThi" Member="tbl_LichThis" ThisKey="id_sv" OtherKey="id_sv" Type="tbl_LichThi" />
+      <Association Name="tbl_Lop_tbl_SinhVien" Member="tbl_Lop" ThisKey="id_lop_th" OtherKey="id_lop_th" Type="tbl_Lop" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_LichThi" Member="tbl_LichThis">
+    <Type Name="tbl_LichThi">
+      <Column Name="id_lt" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="gio_lt" Type="System.String" DbType="Char(5) NOT NULL" CanBeNull="false" />
+      <Column Name="phong_lt" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ngay_lt" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
+      <Column Name="sbd_lt" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="id_sv" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="tbl_SinhVien_tbl_LichThi" Member="tbl_SinhVien" ThisKey="id_sv" OtherKey="id_sv" Type="tbl_SinhVien" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

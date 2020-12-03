@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses1">
+  <DataContextMoniker Name="/DataClasses1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="6428929e-a66e-4360-9e04-b5b5ee9a4507" absoluteBounds="0.5, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClasses1DataContext/tbl_Lop" />
+      <nestedChildShapes>
+        <elementListCompartment Id="294f96b7-6a99-4e58-9b7d-aac7b7e82cab" absoluteBounds="0.515, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="45678cbf-59e7-408c-8048-425273f1c3e7" absoluteBounds="3.375, 0.625, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DataClasses1DataContext/tbl_SinhVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b778b78a-11cd-4096-8992-6878d684b802" absoluteBounds="3.3899999999999997, 1.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.34699625651042); (3.375 : 1.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/tbl_Lop/tbl_Lop_tbl_SinhVien" />
+      <nodes>
+        <classShapeMoniker Id="6428929e-a66e-4360-9e04-b5b5ee9a4507" />
+        <classShapeMoniker Id="45678cbf-59e7-408c-8048-425273f1c3e7" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="05182512-2801-4367-ac32-5195400ec033" absoluteBounds="6.25, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClasses1DataContext/tbl_LichThi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c1757c4-e001-40ab-bbcf-3978891c4972" absoluteBounds="6.265, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.375 : 2.04890055338542); (6.25 : 2.04890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClasses1DataContext/tbl_SinhVien/tbl_SinhVien_tbl_LichThi" />
+      <nodes>
+        <classShapeMoniker Id="45678cbf-59e7-408c-8048-425273f1c3e7" />
+        <classShapeMoniker Id="05182512-2801-4367-ac32-5195400ec033" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
